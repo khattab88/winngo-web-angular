@@ -1,0 +1,40 @@
+<div class="interests">
+
+  <!-- <div class="container-fluid"> -->
+
+  <div class="row">
+    <div class="col">
+      <h1>Interests</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="list">
+
+        <div class="item" *ngFor="let interest of interests">
+          <div class="check">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="label">{{ interest.name }}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button id="save">Save Interests</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <a href="#" id="skip">Skip</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- </div> -->

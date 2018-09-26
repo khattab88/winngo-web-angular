@@ -1,0 +1,94 @@
+.interests {
+    width: 80%;
+    margin: 5vh auto;
+    text-align: center;
+}
+
+.list {
+    margin-top: 3vh;
+} 
+
+.item {
+    height: 15vw;;
+    padding-left: 8vw;
+    padding-left: 12vw;
+    margin-bottom: 3vw;
+}
+
+.list .item .check {
+    float: left;
+    width: 10vw;
+    height: 10vw;
+    
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;     
+    line-height: 10vw;
+    
+    text-align: center;
+    border-radius: 50%;
+        
+    margin-left:auto;
+    margin-right:auto;
+      
+}
+
+.item i {
+    font-size: 200%;
+}
+
+.list .item .label {
+    float: left;
+    text-align: left;
+    padding-left: 8vw;
+    font-size: 150%;
+}
+
+button#save {
+    width: 100%;
+    height: 3rem;
+    border: 2px solid #888;
+    border-radius: 5px;
+    background-color: #ccc;
+    font-size: 150%;
+    margin: 2vh 0;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: beige;
+    }
+
+    .interests {
+        width: 60%;
+    }
+
+    .list {
+        margin: 0;
+        margin-top: 5vh;
+    }
+
+    .item {
+        margin-bottom: 0;
+        height: 13vw;
+        padding-left: 9vw;
+    }
+
+    .item i {
+        font-size: 250%;
+    }
+
+    .list .item .label {
+        padding-top: 1vh;
+        font-size: 200%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}

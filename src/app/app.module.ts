@@ -8,12 +8,14 @@ import { AngularFireAuthModule } from "angularfire2/auth";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { InterestsComponent } from './interests/interests.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    InterestsComponent
   ],
   imports: [
     BrowserModule,
