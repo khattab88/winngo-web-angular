@@ -1,0 +1,195 @@
+.home {
+    width: 100%;
+    height: 100vh;
+}
+
+/* bootstrap overrides */
+.container,
+.container-fluid,
+.row,
+.col {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+header {
+    height: 3.5rem;
+    background-color: #aaa;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.button {
+    padding-top: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.button a {
+    color: #fff;
+}
+
+#badge > span {
+    width: 7vw;
+    height: 7vw;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2vw
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ddd;
+    height: 7vh;
+}
+
+ul li {
+    float: left;
+    width: 50%;
+    border-bottom: 2px solid #555;
+    text-align: center;
+    padding-top: 3vw;
+    padding-bottom: 2.5vw;
+}
+
+ul li:nth-child(1) {
+    background-color: #ccc;
+}
+
+ul li:nth-child(2) {
+    border-bottom: none;
+}
+
+.tab {
+    padding-top: 2vw;
+    font-weight: 500;
+}
+
+
+section {
+    padding: 10vw 3vw;
+
+}
+
+.row {
+    margin-bottom: 5vw;
+    padding: 0 2.5vw;
+}
+
+.col {
+    float: left;
+    text-align: center;
+    padding: 1vw;
+}
+
+section .col {
+    padding: 0.2rem !important;
+}
+
+.card {
+    width: 100%;
+    height: 25vh;
+    background-color: darkcyan;
+    color: #fff;
+    font-size: 300%;
+    border: 2px solid #555;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+.info {
+    width: 70%;
+    height: 100%;
+    background-color: #ddd;
+    padding-top: 5vw;
+}
+
+.total {
+    width: 30%;
+    height: 100%;
+    background-color: cornflowerblue;
+    padding-top: 5vw;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: bisque;
+    }
+
+    header {
+        height: 3rem;
+    }
+
+    .button {
+        padding-top: 2vw;
+    }
+
+    header i {
+        font-size: 150%;
+    }
+
+    #badge {
+        margin-top: -1.5vh;
+    }
+
+    #badge > span {
+        font-size: 110%;
+        width: 4vw;
+        height: 4vw;
+        padding-top: 0.75vw;
+    }
+
+    nav ul {
+        height: 2.5rem;
+    }
+
+    ul li {
+        padding-top: 1vw;
+    }
+
+    section {
+        padding-top: 4vw;
+    }
+
+    footer {
+        height: 3rem;
+    }
+
+    .info {
+        padding-top: 2vw;
+    }
+
+    .total {
+        padding-top: 2vw;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}
