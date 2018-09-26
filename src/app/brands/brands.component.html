@@ -1,0 +1,53 @@
+<div class="brands">
+    <header>
+        <div class="left">
+            <div class="button">
+                <a href="#">
+                    <i class="fas fa-align-justify"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="button left">
+                <div id="badge">
+                    <a href="#">3</a>
+                </div>
+            </div>
+            <div class="button left">
+                <a href="#">
+                    <i class="fab fa-sistrix"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav">
+            <li>
+                <span class="tab">Categories</span>
+            </li>
+            <li>
+                <span class="tab">Brands</span>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <div id="list">
+
+            <div class="item" *ngFor="let brand of brands">
+                <div class="logo">
+                    <img src="{{ brand.img }}" alt="{{ brand.title }}">
+                </div>
+                <div class="info">
+                    <p class="title">{{ brand.title }}</p>
+                    <p>{{ brand.noOfBranches }} Branchess</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
