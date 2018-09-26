@@ -1,0 +1,86 @@
+.signup {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.field {
+    margin-top: 4vw;
+}
+
+.gender span {
+    margin-right: 7vw;
+}
+
+input[type='radio'] {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+label {
+    margin: 0.6rem;
+}
+
+.input {
+    height: 3rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 5vw;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+select {
+    width: 100%;
+}
+
+select {
+    text-align-last: center;
+    height: 2.5rem;
+}
+
+input[type="date"] {
+    width: 70%;
+    float: right;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: bisque;
+    }
+
+    .signup {
+        width: 60%;
+    }
+
+    .field {
+        margin-top: 1vw;
+    }
+
+    .input {
+        height: 2.5rem;
+    }
+
+    label {
+        margin: 0.75rem;
+        font-size: 1.15rem;
+    }
+
+    .gender span {
+        font-size: 1.25rem;
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}
