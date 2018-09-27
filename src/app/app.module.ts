@@ -34,6 +34,7 @@ import { BrandsComponent } from './brands/brands.component';
       { path:"login", component: LoginComponent },
       { path:"signup", component: SignupComponent },
       { path:"interests", component: InterestsComponent },
+      {path: '**', redirectTo: ''}
     ])
   ],
   providers: [],
