@@ -1,0 +1,30 @@
+header {
+    height: 3.5rem;
+    background-color: #aaa;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.button {
+    padding-top: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.button a {
+    color: #fff;
+}
+
+#badge > span {
+    width: 7vw;
+    height: 7vw;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2vw
+}
