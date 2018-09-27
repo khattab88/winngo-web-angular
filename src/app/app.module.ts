@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireAuthModule } from "angularfire2/auth";
+import { RouterModule } from "@angular/router";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -25,7 +27,14 @@ import { BrandsComponent } from './brands/brands.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgbModule.forRoot(),
+    RouterModule.forRoot([
+      { path:"", component: HomeComponent },
+      { path:"login", component: LoginComponent },
+      { path:"signup", component: SignupComponent },
+      { path:"interests", component: InterestsComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
