@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandsComponent implements OnInit {
 
-  private brands = [
+  public brands = [
     {
         id: 1,
         title: "Adidas",

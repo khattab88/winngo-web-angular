@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterestsComponent implements OnInit {
 
-  private interests = [
+  public interests = [
     { name: "Category 1", selcted: true },
     { name: "Category 2", selcted: false },
     { name: "Category 3", selcted: true },
