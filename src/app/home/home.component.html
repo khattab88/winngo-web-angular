@@ -1,63 +1,21 @@
 <div class="home">
 
     <app-header></app-header>
-    <!-- <nav>
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <span class="tab">Categories</span>
-                </li>
-                <li class="nav-item">
-                    <span class="tab">Brands</span>
-                </li>
-            </ul>
-        </nav> -->
-
-
 
     <ngb-tabset id="home-tabs" #t="ngbTabset">
         <ngb-tab id="tab-categories">
             <ng-template ngbTabTitle>Categories</ng-template>
             <ng-template ngbTabContent>
-                    <section>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card">
-                                        1
-                                        <!-- <img src="img/01-shopping.jpg" alt="shopping"> -->
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">2</div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">3</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card">4</div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">5</div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">6</div>
-                                </div>
-                            </div>
-                        </section>
+                 <categories></categories>
             </ng-template>
         </ngb-tab>
         <ngb-tab id="tab-brands">
             <ng-template ngbTabTitle>Brands</ng-template>
             <ng-template ngbTabContent>
-                tab 2
+                <brands></brands>
             </ng-template>
         </ngb-tab>
     </ngb-tabset>
-
-
-
-    
 
     <footer>
         <div class="info left">Full Name: John Doe</div>
