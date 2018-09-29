@@ -16,6 +16,10 @@ import { BrandsComponent } from './brands/brands.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { BranchesComponent } from './branches/branches.component';
+import { BrancgComponent } from './brancg/brancg.component';
+import { BranchComponent } from './branch/branch.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { BranchesComponent } from './branches/branches.component';
     BrandsComponent,
     HeaderComponent,
     CategoriesComponent,
-    BranchesComponent
+    BranchesComponent,
+    BranchComponent,
+    BranchComponent,
+    ProfileComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +49,9 @@ import { BranchesComponent } from './branches/branches.component';
       { path:"signup", component: SignupComponent },
       { path:"interests", component: InterestsComponent },
       { path:"branches", component: BranchesComponent },
+      { path:"branch", component: BranchComponent },
+      { path:"profile", component: ProfileComponent },
+      { path:"profile-editor", component: ProfileEditorComponent },
       {path: '**', redirectTo: ''}
     ])
   ],

@@ -1,0 +1,201 @@
+.profile-editor {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    height: 8vh;
+    background-color: #aaa;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.button {
+    padding-top: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.button a {
+    color: #fff;
+}
+
+#badge {
+    width: 7vw;
+    height: 7vw;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f11;
+    color: #fff;
+}
+
+
+.title {
+    float: left;
+    padding-top: 4vw;
+    padding-left: 25vw;
+}
+
+.title h3 {
+    font-size: 125%;
+    color: #fff;
+}
+
+
+
+.container {
+    padding: 3vw 5vw !important;
+}
+
+.head {
+    /* background-color: #ccc; */
+    height: 12vh;
+    padding: 2vw;
+    padding-right: 0;
+}
+
+.head .photo {
+    width: 30%;
+}
+
+.head .photo img {
+    width: 20vw;
+    height: 20vw;
+    border: 2px solid #555;
+    border-radius: 50%;
+}
+
+.head div:nth-child(2) {
+    width: 70%;
+}
+
+.field {
+    height: 6vh;
+    margin: 2vh 0;
+}
+
+.field input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 5vw;
+}
+
+.field input[type='radio'] {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 10vw;
+    padding: 0;
+    outline: none;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.gender {
+    padding-top: 1vh;
+    padding-left: 22%;
+}
+
+
+.buttons {
+    position: relative;
+    top: 10vh;
+}
+
+.field button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: font-size 0.25s;
+}
+
+.field button:hover {
+    font-size: 110%;
+}
+
+#save {
+    background-color: darkseagreen;
+}
+
+#cancel {
+    background-color: cornflowerblue;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: bisque;
+    }
+
+    header {
+        height: 3rem;
+    }
+
+    .button {
+        padding-top: 2vw;
+    }
+
+    .title {
+        padding-top: 2vw;
+        padding-left: 35vw;
+    }
+
+    #badge {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .head {
+        height: 5.5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .head .photo {
+        width: 25%;
+    }
+
+    .head div:nth-child(2) {
+        width: 75%;
+        padding-top: 1.5vw;
+    }
+
+    .head .photo img {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .field {
+        height: 3rem;
+    }
+
+    .field input[type='radio'] {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .gender {
+        padding-top: 2vh;
+    }
+
+    .buttons {
+        top: 4vh;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}

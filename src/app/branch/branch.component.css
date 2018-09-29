@@ -1,0 +1,199 @@
+.branch {
+    width: 100%;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+header {
+    height: 10vh;
+    padding: 2vh 5vw;
+    background-color: #999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    padding-top: 0vh;
+    color: #fff;
+}
+
+.nav i {
+    font-size: 250%;
+}
+
+.nav label {
+    padding-top: 1vh;
+    margin-left: 1vw;
+    font-weight: 500;
+}
+
+.banner {
+    height: 30vh;
+    /* background-image: url("img/adidas-store-photo-720x478.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#push {
+    position: relative;
+    top: 17vh;
+    left: 76vw;
+    width: 20vw;
+    height: 20vw;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding-top: 6vw;
+    padding-left: 3.5vw;
+    font-weight: 500;
+}
+
+section {
+    height: 50vh;
+    padding: 2vh 4vw;
+}
+
+.toolbar {
+    height: 12vh;
+    background-color: #ccc;
+}
+
+.toolbar div:first-child {
+    float: left;
+}
+
+.thumb {
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid #000;
+}
+
+.info {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    margin-left: 2vw;
+}
+
+.info div {
+    padding-top: 1vh;
+}
+
+.name {
+    font-weight: 500;
+}   
+
+.rating {
+}
+
+.box {
+    height: 100%;
+    width: 20%;
+    padding-top: 2vh;
+}
+
+.box i {
+    font-size: 300%;
+}
+
+p {
+    margin-top: 2vh;
+}
+
+p a {
+    text-decoration: underline;
+}
+
+footer {
+    height: 10vh;
+    background-color: #ccc;
+    padding: 2vh 4vw;
+}
+
+footer i {
+    font-size: 200%;
+}
+
+footer p {
+    margin-left: 2vw;
+    margin-top: 1vh;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: bisque;
+    }
+
+    header {
+        height: 3rem;
+        padding-top: 0.5vw;
+    }
+
+    .nav label {
+        font-size: 150%;
+    }
+
+    .nav i {
+        font-size: 220%;
+    }
+
+    .banner {
+        height: 10rem;
+    }
+
+    #push {
+        top: 2vh;
+        font-size: 200%;
+        padding-left: 2.5vw;
+        border-width: 5px;
+    }
+
+    .toolbar {
+        height: 3rem;
+    }
+
+    .thumb {
+        width: 15vw;
+        height: 16vw;
+    }
+
+    .box i {
+        font-size: 200%;
+    }
+
+    .info {
+        flex-direction: row;
+    }
+
+    .info .name {
+        font-size: 150%;
+    }
+
+    .info .rating {
+        padding-top: 1.5vw;
+        padding-left: 2vw;
+    }
+
+    footer {
+        height: 13vh;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}
