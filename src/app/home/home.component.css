@@ -13,7 +13,9 @@
 }
 
 
-ul {
+/* Header */
+
+:host ::ng-deep #home-tabs ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -21,27 +23,28 @@ ul {
     height: 7vh;
 }
 
-ul li {
+:host ::ng-deep #home-tabs ul li {
     float: left;
     width: 50%;
-    border-bottom: 2px solid #555;
     text-align: center;
     padding-top: 3vw;
     padding-bottom: 2.5vw;
 }
 
-ul li:nth-child(1) {
-    background-color: #ccc;
-}
-
-ul li:nth-child(2) {
-    border-bottom: none;
-}
-
-.tab {
-    padding-top: 2vw;
+:host ::ng-deep #home-tabs a.nav-link {
+    color: #333;
+    padding-top: 1vw;
     font-weight: 500;
-}
+  }
+  
+  :host ::ng-deep #home-tabs a.nav-link.active {
+    font-weight: bold;
+    background-color: #ddd;
+    border-bottom: 2px solid #555;
+    transition: 0.3s border-bottom;
+  }
+
+
 
 
 section {
@@ -93,6 +96,7 @@ footer {
     height: 100%;
     background-color: #ddd;
     padding-top: 5vw;
+    float: left;
 }
 
 .total {
@@ -100,6 +104,7 @@ footer {
     height: 100%;
     background-color: cornflowerblue;
     padding-top: 5vw;
+    float: left;
 }
 
 
