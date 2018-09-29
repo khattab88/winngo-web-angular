@@ -1,0 +1,73 @@
+<div class="branches">
+
+    <header>
+        <div class="left">
+            <div class="button">
+                <a href="#">
+                    <i class="fa fa-chevron-left"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+        <div class="title">
+            <h3>Branches</h3>
+        </div>
+
+        <div class="right">
+            <div class="button left">
+                <a href="#">
+                    <i class="fa fa-filter"></i>
+                </a>
+            </div>
+            <div class="button left">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="sortby">
+        <label for="category">Sort by: </label>
+        <div class="property">
+            <i class="fa fa-location-arrow"></i>
+        </div>
+        <div class="property">
+            <i class="fa fa-sort-up"></i>
+        </div>
+        <div class="property">
+            <i class="fa fa-sort-down"></i>
+        </div>
+        <div class="property">
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="property">
+            <i class="fa fa-star"></i>
+        </div>
+    </div>
+
+    <div class="container" id="list">
+
+        <div class="item" *ngFor="let branch of branches">
+            <div class="logo">
+                <img src="img/adidas-black-vector-logo.png" alt="{{ branch.name }}">
+            </div>
+            <div class="info">
+                <div class="name">{{ branch.name }}</div>
+                <div class="address">{{ branch.address }}</div>
+            </div>
+            <div class="detail">
+                <div class="percentage">{{ branch.percentage }}%</div>
+                <div class="cash">{{ branch.cash }} L.E.</div>
+            </div>
+            <div class="like">
+                <i *ngIf="branch.liked" class="fa fa-heart"></i>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

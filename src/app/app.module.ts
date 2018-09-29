@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { BrandsComponent } from './brands/brands.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { BranchesComponent } from './branches/branches.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CategoriesComponent } from './categories/categories.component';
     HomeComponent,
     BrandsComponent,
     HeaderComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    BranchesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { CategoriesComponent } from './categories/categories.component';
       { path:"login", component: LoginComponent },
       { path:"signup", component: SignupComponent },
       { path:"interests", component: InterestsComponent },
+      { path:"branches", component: BranchesComponent },
       {path: '**', redirectTo: ''}
     ])
   ],
