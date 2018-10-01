@@ -20,6 +20,7 @@ import { BranchComponent } from './branch/branch.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -50,13 +51,14 @@ import { AuthService } from './auth.service';
       { path:"interests", component: InterestsComponent },
       { path:"branches", component: BranchesComponent },
       { path:"branch", component: BranchComponent },
-      { path:"profile", component: ProfileComponent },
-      { path:"profile-editor", component: ProfileEditorComponent },
+      { path:"profile", component: ProfileComponent, canActivate: [AuthGuard] },
+      { path:"profile-editor", component: ProfileEditorComponent, canActivate: [AuthGuard] },
       {path: '**', redirectTo: ''}
     ])
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
