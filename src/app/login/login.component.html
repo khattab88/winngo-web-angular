@@ -1,12 +1,12 @@
 <div class="login">
 
-    <div class="row">
-      <div class="col">
-        <h1>Winngo</h1>
-      </div>
+  <div class="row">
+    <div class="col">
+      <h1>Winngo</h1>
     </div>
+  </div>
 
-    <!-- <div class="row">
+  <!-- <div class="row">
       <div class="col">
         <input type="text" class="field input" placeholder="Full Name" disabled>
       </div>
@@ -24,48 +24,53 @@
       </div>
     </div> -->
 
-    <!-- <div class="row">
+  <!-- <div class="row">
       <div class="col">
         <a href="#" class="field">Forget password?</a>
       </div>
     </div> -->
 
-    <div class="row">
-      <div class="col">
-        <hr>
-      </div>
+  <div class="row">
+    <div class="col">
+      <hr>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col">
-        <button class="field button btn-success" id="google-btn" (click)="loginGoogle()" >
-          Login with Google
-          <i class="fa fa-google"></i>
-        </button>
-      </div>
+  <div class="row">
+    <div class="col">
+      <button class="field button btn-success" id="google-btn" (click)="loginGoogle()">
+        Login with Google
+        <i class="fa fa-google"></i>
+      </button>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col">
-          <button class="field button btn-primary" id="facebook-btn" disabled>
-            Login with Facebook
-            <i class="fa fa-facebook"></i>
-          </button>
-          <!-- <button class="field button" id="facebook-btn">Facebook</button> -->
-        </div>
-      </div>
+  <div class="row">
+    <div class="col">
+      <button class="field button btn-primary" id="facebook-btn" disabled>
+        Login with Facebook
+        <i class="fa fa-facebook"></i>
+      </button>
+      <!-- <button class="field button" id="facebook-btn">Facebook</button> -->
+    </div>
+  </div>
 
-    <div class="row">
-        <div class="col">
-          <button class="field button" id="signup-btn" routerLink="/signup" disabled>Sign Up</button>
-        </div>
-      </div>  
+  <div class="row">
+    <div class="col">
+      <button class="field button" (click)="logout()">Logout</button>
+    </div>
+  </div>
 
-    <!-- <div class="row">
+  <div class="row">
+    <div class="col">
+      <button class="field button" id="signup-btn" routerLink="/signup" disabled>Sign Up</button>
+    </div>
+  </div>
+
+  <!-- <div class="row">
       <div class="col">
         <a href="#" class="field">Skip</a>
       </div>
     </div> -->
 
-  </div>
-
+</div>
