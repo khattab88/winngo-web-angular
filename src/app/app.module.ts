@@ -16,10 +16,10 @@ import { BrandsComponent } from './brands/brands.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { BranchesComponent } from './branches/branches.component';
-import { BrancgComponent } from './brancg/brancg.component';
 import { BranchComponent } from './branch/branch.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +55,9 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
       {path: '**', redirectTo: ''}
     ])
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

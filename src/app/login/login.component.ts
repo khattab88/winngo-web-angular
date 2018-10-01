@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from "angularfire2/auth";
-import * as firebase from 'firebase';
-import { Observable } from "rxjs/Observable";
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'login',
@@ -9,18 +8,12 @@ import { Observable } from "rxjs/Observable";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  user$: Observable<firebase.User>;
+  
 
-  constructor(private afAuth:AngularFireAuth) {
-    this.user$ = afAuth.authState;
+  constructor(private auth:AuthService) {
   }
 
   loginGoogle(){
-    this.afAuth.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+    this.auth.loginGoogle();
   }
-
-  logout(){
-    this.afAuth.auth.signOut();
-  }
-
 }
