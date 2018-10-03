@@ -5,7 +5,7 @@ section {
 
 .row {
     margin-bottom: 5vw;
-    padding: 0 2.5vw;
+    padding: 1vw 2.5vw;
 }
 
 .col {
@@ -21,13 +21,19 @@ section .col {
 .card {
     width: 100%;
     height: 25vh;
-    background-color: darkcyan;
-    color: #fff;
+    /* background-color: darkcyan;
+    color: #fff; */
     font-size: 300%;
-    border: 2px solid #555;
+    border: 3px solid #555;
 }
 
 .card img {
     width: 100%;
-    height: 100%;
+    height: 70%;
+    border-bottom: 2px solid #333;
+}
+
+.card span {
+    font-size: 1.25rem;
+    padding-top: 2vw;
 }
