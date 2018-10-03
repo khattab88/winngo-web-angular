@@ -1,6 +1,7 @@
 import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private auth: AuthService, private router: Router){
+  constructor(private user: UserService, private auth: AuthService, private router: Router){
+
     this.auth.user$.subscribe(user => {
       if(user){
+        this.user.save(user);
+
         let returnUrl = localStorage.getItem("returnUrl");
         this.router.navigateByUrl(returnUrl);
       }
