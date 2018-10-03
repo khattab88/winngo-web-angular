@@ -30,7 +30,7 @@ export class BrandsComponent implements OnInit {
         id: 4,
         title: "Smart Gym",
         noOfBranches: 12,
-        img: "gym-gym.png"
+        img: "smart-gym.png"
     },
     {
         id: 5,

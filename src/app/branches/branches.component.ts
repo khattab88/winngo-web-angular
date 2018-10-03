@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'branches',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BranchesComponent implements OnInit {
 
+  brandName: string;
   public branches = [
     {
         id: 1,
@@ -90,9 +92,13 @@ export class BranchesComponent implements OnInit {
     },
 ];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.brandName = this.route.snapshot.params.brandname;
+    this.branches = this.branches.filter((branch)=>{
+        return branch.brand === this.brandName.toLowerCase();
+    });
   }
 
 }

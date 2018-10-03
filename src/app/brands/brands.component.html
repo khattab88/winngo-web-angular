@@ -1,7 +1,7 @@
 <section>
     <div id="list">
 
-        <div class="item" *ngFor="let brand of brands" routerLink="/branches">
+        <div class="item" *ngFor="let brand of brands" [routerLink]="['/branches', brand.title]">
             <div class="logo">
                 <img src="/assets/{{ brand.img }}" alt="{{ brand.title }}">
             </div>
