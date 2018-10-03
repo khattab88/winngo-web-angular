@@ -49,7 +49,9 @@
 
     <div class="container" id="list">
 
-        <div class="item" *ngFor="let branch of branches">
+        <div class="item" 
+            *ngFor="let branch of branches" 
+            [routerLink]="['/branches', branch.brand, branch.name]">
             <div class="logo">
                 <img src="/assets/{{ branch.img }}" alt="{{ branch.name }}">
             </div>

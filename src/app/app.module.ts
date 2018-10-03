@@ -51,7 +51,7 @@ import { UserService } from './user.service';
       { path:"signup", component: SignupComponent },
       { path:"interests", component: InterestsComponent },
       { path:"branches/:brandname", component: BranchesComponent },
-      { path:"branch/:branchid", component: BranchComponent },
+      { path:"branches/:brandname/:branchname", component: BranchComponent },
       { path:"profile", component: ProfileComponent, canActivate: [AuthGuard] },
       { path:"profile-editor", component: ProfileEditorComponent, canActivate: [AuthGuard] },
       {path: '**', redirectTo: ''}
