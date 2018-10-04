@@ -16,7 +16,7 @@ export class AppComponent {
         this.user.save(user);
 
         let returnUrl = localStorage.getItem("returnUrl");
-        this.router.navigateByUrl(returnUrl);
+        //if(returnUrl) this.router.navigateByUrl(returnUrl);
       }
     });
   }
