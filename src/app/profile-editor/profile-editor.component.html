@@ -31,35 +31,35 @@
 
         <div class="head">
             <div class="photo left">
-                <img src="img/user.png" alt="">
+                <img src="/assets/user.png" alt="">
             </div>
             <div class="left">
                 <div class="field">
-                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Full Name" value="{{ name }}">
                 </div>
             </div>
         </div>
 
         <div class="field">
-            <input type="tel" placeholder="Mobile number">
+            <input type="tel" placeholder="Mobile number" value="{{ mobile }}">
         </div>
         <div class="field">
-            <input type="email" placeholder="Email">
+            <input type="email" placeholder="Email" value="{{ email }}">
         </div>
         <div class="field">
-            <input type="date" placeholder="Birth date">
+            <input type="text" placeholder="Birth date" value="{{ birthDate }}">
         </div>
         <div class="field gender">
             <label for="gender">Male</label>
-            <input type="radio" name="gender" value="male">
+            <input type="radio" name="gender" value="male" checked>
             <label for="gender">Female</label>
             <input type="radio" name="gender" value="female">
         </div>
         <div class="field">
-            <input type="text" placeholder="Home area">
+            <input type="text" placeholder="Home area" value="{{ homeArea }}">
         </div>
         <div class="field">
-            <input type="text" placeholder="Work area">
+            <input type="text" placeholder="Work area" value="{{ workArea }}">
         </div>
 
         <div class="buttons">
