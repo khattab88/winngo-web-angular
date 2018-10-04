@@ -1,12 +1,12 @@
 <section>
     <div id="list">
 
-        <div class="item" *ngFor="let brand of brands" [routerLink]="['/branches', brand.title]">
+        <div class="item" *ngFor="let brand of list" [routerLink]="['/branches', brand.name]">
             <div class="logo">
-                <img src="/assets/{{ brand.img }}" alt="{{ brand.title }}">
+                <img src="{{ brand.logo }}" alt="{{ brand.name }}">
             </div>
             <div class="info">
-                <p class="title">{{ brand.title }}</p>
+                <p class="title">{{ brand.name }}</p>
                 <p>{{ brand.noOfBranches }} Branchess</p>
             </div>
         </div>

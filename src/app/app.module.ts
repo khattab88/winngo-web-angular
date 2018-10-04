@@ -22,6 +22,8 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { UserService } from './data/user.service';
+import { BrandService } from './data/brand.service';
+import { BranchService } from './data/branch.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { UserService } from './data/user.service';
   providers: [
     AuthService,
     AuthGuard,
-    UserService
+    UserService,
+    BrandService,
+    BranchService
   ],
   bootstrap: [AppComponent]
 })
