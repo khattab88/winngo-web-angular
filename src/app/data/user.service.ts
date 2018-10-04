@@ -1,14 +1,15 @@
+import { AuthService } from './../auth.service';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
-import { AppUser } from './models/app-user';
+import { AppUser } from '../models/app-user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) {}
 
   save(user: firebase.User){
     this.db.object("/users/" + user.uid).update({
@@ -20,4 +21,5 @@ export class UserService {
   get(uid: string): FirebaseObjectObservable<AppUser>{
     return this.db.object("/users/" + uid);
   }
+
 }

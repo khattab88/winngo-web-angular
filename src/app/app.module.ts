@@ -21,7 +21,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
-import { UserService } from './user.service';
+import { UserService } from './data/user.service';
 
 @NgModule({
   declarations: [
