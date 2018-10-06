@@ -18,6 +18,14 @@ export class BranchService {
     return this.db.object("/branches/" + id);
   }
 
+  getByName(name: string): FirebaseListObservable<Branch[]>{
+    return this.db.list("/branches/",
+     {query: {
+      orderByChild: "name",
+      equalTo: name
+    }});
+  }
+
   getByBrand(brandId: string): FirebaseListObservable<Branch[]>{
     return this.db.list("/branches/"
       , {query:{ orderByChild: "brandId", equalTo: brandId }});

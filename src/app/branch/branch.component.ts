@@ -1,5 +1,9 @@
+import { Branch } from './../models/branch';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { BranchService } from '../data/branch.service';
+import { BrandService } from '../data/brand.service';
+import { Brand } from '../models/brand';
 
 @Component({
   selector: 'branch',
@@ -9,14 +13,23 @@ import { Component, OnInit } from '@angular/core';
 export class BranchComponent implements OnInit {
   brandName: string;
   branchName: string;
+  brand: Brand;
+  branch: Branch;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private branchSvc: BranchService, private brandSvc: BrandService) { }
 
   ngOnInit() {
     this.brandName = this.route.snapshot.params.brandname;
     this.branchName = this.route.snapshot.params.branchname;
-    
-    //console.log(this.brandName + "/" + this.branchName);
+   
+    this.brandSvc.getByName(this.brandName).subscribe(brands => {
+      this.brand = brands[0];
+
+      this.branchSvc.getByName(this.branchName).subscribe(branches => {
+        this.branch = branches[0];
+        console.log(this.branch);
+      });
+    });
   }
 
 }

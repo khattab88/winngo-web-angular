@@ -7,4 +7,6 @@ export interface Branch {
     cash: number;
     percentage: number;
     liked: boolean;
+    rating: number;
+    desc: string;
 }

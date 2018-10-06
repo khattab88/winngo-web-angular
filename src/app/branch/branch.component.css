@@ -36,8 +36,6 @@ header {
 
 .banner {
     height: 30vh;
-    /* background-image: url("img/adidas-store-photo-720x478.jpg"); */
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/winngo-6c09e.appspot.com/o/adidas-store-photo-720x478.jpg?alt=media&token=c901c0de-de67-4daf-8fe4-0d0e0ad3912b");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
