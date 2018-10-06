@@ -16,7 +16,7 @@ export class BranchComponent implements OnInit {
     this.brandName = this.route.snapshot.params.brandname;
     this.branchName = this.route.snapshot.params.branchname;
     
-    console.log(this.brandName + "/" + this.branchName);
+    //console.log(this.brandName + "/" + this.branchName);
   }
 
 }

@@ -47,13 +47,12 @@
         </div>
     </div>
 
-    <div class="container" id="list">
-
+    <div class="container" id="list" *ngIf="list.length > 0 else empty">
         <div class="item" 
-            *ngFor="let branch of branches" 
-            [routerLink]="['/branches', branch.brand, branch.name]">
+            *ngFor="let branch of list" 
+            [routerLink]="['/branches', brand.name, branch.name]">
             <div class="logo">
-                <img src="/assets/{{ branch.img }}" alt="{{ branch.name }}">
+                <img src="{{ brand.logo }}" alt="{{ branch.name }}">
             </div>
             <div class="info">
                 <div class="name">{{ branch.name }}</div>
@@ -67,9 +66,10 @@
                 <i *ngIf="branch.liked" class="fa fa-heart"></i>
             </div>
         </div>
-
-
-
     </div>
+
+    <ng-template #empty>
+        <h2>No Items Found</h2>
+    </ng-template>
 
 </div>
