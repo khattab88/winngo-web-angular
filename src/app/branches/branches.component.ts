@@ -1,4 +1,3 @@
-import { Brand } from './../models/brand';
 import { BrandService } from './../data/brand.service';
 import { Branch } from './../models/branch';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +14,7 @@ import 'rxjs/add/operator/first';
 export class BranchesComponent implements OnInit {
 
     brandName: string;
-    brand: Brand;
+    brandObj: Brand;
     list: Branch[] = new Array<Branch>();
 
     constructor(private route: ActivatedRoute, private branchSvc: BranchService, private brandSvc: BrandService) { }
@@ -24,9 +23,9 @@ export class BranchesComponent implements OnInit {
         this.brandName = this.route.snapshot.params.brandname;
 
         this.brandSvc.getByName(this.brandName).subscribe(brands => {
-            this.brand = brands[0];
+            this.brandObj = brands[0];
 
-            this.branchSvc.getByBrand(this.brand.id)
+            this.branchSvc.getByBrand(this.brandObj.id)
             .subscribe(branches => {
                 this.list = branches;
             });

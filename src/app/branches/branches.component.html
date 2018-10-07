@@ -50,9 +50,9 @@
     <div class="container" id="list" *ngIf="list.length > 0 else empty">
         <div class="item" 
             *ngFor="let branch of list" 
-            [routerLink]="['/branches', brand.name, branch.name]">
+            [routerLink]="['/branches', brandObj.name, branch.name]">
             <div class="logo">
-                <img src="{{ brand.logo }}" alt="{{ branch.name }}">
+                <img src="{{ brandObj.logo }}" alt="{{ branch.name }}">
             </div>
             <div class="info">
                 <div class="name">{{ branch.name }}</div>
