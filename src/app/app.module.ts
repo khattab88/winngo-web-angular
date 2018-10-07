@@ -24,6 +24,7 @@ import { AuthGuard } from './auth-guard.service';
 import { UserService } from './data/user.service';
 import { BrandService } from './data/brand.service';
 import { BranchService } from './data/branch.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BranchService } from './data/branch.service';
     BranchComponent,
     BranchComponent,
     ProfileComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
