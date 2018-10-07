@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  activeTab: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    
-  }
+    this.activeTab = "tab-categories";
 
+    this.route.queryParams.subscribe(params => {
+      this.activeTab = `tab-${params["activetab"]}`;
+    });
+  }
 }

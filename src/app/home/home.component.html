@@ -2,7 +2,7 @@
 
     <app-header></app-header>
 
-    <ngb-tabset id="home-tabs" #t="ngbTabset">
+    <ngb-tabset id="home-tabs" #t="ngbTabset" [activeId]="activeTab">
         <ngb-tab id="tab-categories">
             <ng-template ngbTabTitle>Categories</ng-template>
             <ng-template ngbTabContent>
