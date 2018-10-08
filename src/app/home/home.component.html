@@ -6,13 +6,13 @@
         <ngb-tab id="tab-categories">
             <ng-template ngbTabTitle>Categories</ng-template>
             <ng-template ngbTabContent>
-                 <categories></categories>
+                 <categories (categorySelected)="onCategorySelected($event)"></categories>
             </ng-template>
         </ngb-tab>
         <ngb-tab id="tab-brands">
             <ng-template ngbTabTitle>Brands</ng-template>
             <ng-template ngbTabContent>
-                <brands></brands>
+                <brands [selectedCategory]="selectedCategory"></brands>
             </ng-template>
         </ngb-tab>
     </ngb-tabset>

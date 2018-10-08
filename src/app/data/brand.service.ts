@@ -1,3 +1,4 @@
+import { Brand } from './../models/brand';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
@@ -26,5 +27,14 @@ export class BrandService {
       orderByChild: "name",
       equalTo: name
     }});
+  }
+
+  getByCategory(categoryId: number): FirebaseListObservable<Brand[]>{
+    return this.db.list("/brands/", {
+      query: {
+        orderByChild: "categoryId",
+        equalTo: categoryId
+       }
+    });
   }
 }

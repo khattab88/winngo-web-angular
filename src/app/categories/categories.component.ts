@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'categories',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  @Output() categorySelected = new EventEmitter<number>(); 
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  viewBrands(categoryId){
+    this.categorySelected.emit(categoryId);
+  }
 }

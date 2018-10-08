@@ -4,4 +4,5 @@ export interface Brand {
     logo: string;
     img: string;
     noOfBranches: Number;
+    categoryId: number;
 }
