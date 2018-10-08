@@ -1,50 +1,55 @@
 <div class="branch">
 
-    <header>
-        <div class="left nav" [routerLink]="['/branches', brandName]">
-            <i class="fa fa-angle-left"></i>
-            <label>Back</label>
-        </div>
-        <div class="nav">
-            <label>{{ brand.name }} - {{branch.name }}</label>
-        </div>
-        <div class="nav">
-            <i class="fa fa-phone"></i>
-        </div>
-    </header>
+    <ng-container *ngIf="(branch$ | async)[0] as branchObj">
 
-    <div class="banner" [ngStyle]="{ 'background-image': 'url(' + branch.img + ')'}">
-        <div id="push">{{ branch.cash }} L.E.</div>
-    </div>
+        <header>
+            <div class="left nav" [routerLink]="['/branches', brandName]">
+                <i class="fa fa-angle-left"></i>
+                <label>Back</label>
+            </div>
+            <div class="nav">
+                <label>{{ (brand$ | async)[0].name }} - {{branchObj.name }}</label>
+            </div>
+            <div class="nav">
+                <i class="fa fa-phone"></i>
+            </div>
+        </header>
 
-    <section>
-        <div class="toolbar">
-            <div>
-                <img class="thumb" src="{{ brand.logo }}" alt="{{brand.name}}">
-            </div>
-            <div class="info">
-                <div class="name">{{ branch.name }}</div>
-                <div class="rating">{{ branch.rating }}/10</div>
-            </div>
-            <div class="box right" *ngIf="branch.liked">
-                <i class="fa fa-heart"></i>
-            </div>
-            <div class="box right">
-                <i class="fa fa-image"></i>
-            </div>
+        <div class="banner" [ngStyle]="{ 'background-image': 'url(' + branchObj.img + ')'}">
+            <div id="push">{{ branchObj.cash }} L.E.</div>
         </div>
-        <p>
-            {{ branch.desc }}
-            <a href="#" class="right">More Details</a>
-        </p>
-    </section>
 
-    <footer>
-        <i class="fa fa-map-marker left"></i>
-        <p class="left">
-            <strong>Address: </strong>
-            {{ branch.address }}
-        </p>
-    </footer>
+        <section>
+            <div class="toolbar">
+                <div>
+                    <img class="thumb" src="{{ (brand$ | async)[0].logo }}" alt="{{ (brand$ | async)[0].name }}">
+                </div>
+                <div class="info">
+                    <div class="name">{{ branchObj.name }}</div>
+                    <div class="rating">{{ branchObj.rating }}/10</div>
+                </div>
+                <div class="box right" *ngIf="branch.liked">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <div class="box right">
+                    <i class="fa fa-image"></i>
+                </div>
+            </div>
+            <p>
+                {{ branchObj.desc }}
+                <a href="#" class="right">More Details</a>
+            </p>
+        </section>
+
+        <footer>
+            <i class="fa fa-map-marker left"></i>
+            <p class="left">
+                <strong>Address: </strong>
+                {{ branch.address }}
+            </p>
+        </footer>
+
+    </ng-container>
+
+
 </div>
-

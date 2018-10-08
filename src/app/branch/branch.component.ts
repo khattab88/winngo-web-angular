@@ -1,3 +1,4 @@
+import 'rxjs/add/operator/map';
 import { Branch } from './../models/branch';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -15,6 +16,8 @@ export class BranchComponent implements OnInit {
   branchName: string;
   brand: Brand;
   branch: Branch;
+  brand$;
+  branch$;
 
   constructor(private route: ActivatedRoute, private branchSvc: BranchService, private brandSvc: BrandService) { }
 
@@ -22,12 +25,14 @@ export class BranchComponent implements OnInit {
     this.brandName = this.route.snapshot.params.brandname;
     this.branchName = this.route.snapshot.params.branchname;
    
-    this.brandSvc.getByName(this.brandName).subscribe(brands => {
+    this.brand$ = this.brandSvc.getByName(this.brandName);
+    this.brand$.subscribe(brands => {
       this.brand = brands[0];
 
-      this.branchSvc.getByName(this.branchName).subscribe(branches => {
+      this.branch$ = this.branchSvc.getByName(this.branchName);
+      this.branch$.subscribe(branches => {
         this.branch = branches[0];
-        console.log(this.branch);
+        //console.log(this.branch);
       });
     });
   }
