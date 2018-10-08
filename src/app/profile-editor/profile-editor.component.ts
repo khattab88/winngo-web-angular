@@ -17,6 +17,8 @@ export class ProfileEditorComponent implements OnInit {
   homeArea: string;
   workArea: string; 
 
+  areas: string[] = ["Cairo", "Giza", "Alexandria"];
+
   constructor(private userSvc: UserService, private auth: AuthService) { }
 
   ngOnInit() {

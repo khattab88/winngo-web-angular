@@ -10,32 +10,45 @@
             </div>
             <div class="left">
                 <div class="field">
-                    <input type="text" placeholder="Full Name" value="{{ name }}">
+                    <input type="text" placeholder="Full Name" value="{{ name }}" disabled>
                 </div>
             </div>
         </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" value="{{ email }}" disabled>
+        </div>
 
-        <div class="field">
-            <input type="tel" placeholder="Mobile number" value="{{ mobile }}">
-        </div>
-        <div class="field">
-            <input type="email" placeholder="Email" value="{{ email }}">
-        </div>
-        <div class="field">
-            <input type="text" placeholder="Birth date" value="{{ birthDate }}">
-        </div>
-        <div class="field gender">
-            <label for="gender">Male</label>
-            <input type="radio" name="gender" value="male" checked>
-            <label for="gender">Female</label>
-            <input type="radio" name="gender" value="female">
-        </div>
-        <div class="field">
-            <input type="text" placeholder="Home area" value="{{ homeArea }}">
-        </div>
-        <div class="field">
-            <input type="text" placeholder="Work area" value="{{ workArea }}">
-        </div>
+        <form>
+            <div class="field">
+                <label for="mobile">Mobile</label>
+                <input id="mobile" type="tel" placeholder="Mobile number" value="{{ mobile }}">
+            </div>
+            <div class="field">
+                <label for="birthdate">Birth Date</label>
+                <input id="birthdate" type="date" [value]="birthDate | date:'yyyy-MM-dd'" placeholder="Birth date">
+            </div>
+            <div class="field gender">
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" value="male" [checked]="gender == 'Male'">
+                <label for="gender">Female</label>
+                <input type="radio" name="gender" value="female" [checked]="gender == 'Female'">
+            </div>
+            <div class="field">
+                <label for="homearea">Home</label>
+                <select id="homearea">
+                    <option value="">Select</option>
+                    <option *ngFor="let area of areas" [value]="area" [selected]="area == homeArea">{{ area }}</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="workarea">Work</label>
+                <select id="workarea">
+                    <option value="">Select</option>
+                    <option *ngFor="let area of areas" [value]="area" [selected]="area == workArea">{{ area }}</option>
+                </select>
+            </div>
+        </form>
 
         <div class="buttons">
             <div class="field">
