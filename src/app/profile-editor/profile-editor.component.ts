@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Gender } from '../enums/gender';
 import { AuthService } from '../auth.service';
 import { UserService } from '../data/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'profile-editor',
@@ -21,7 +22,7 @@ export class ProfileEditorComponent implements OnInit {
 
   areas: string[] = ["Cairo", "Giza", "Alexandria"];
 
-  constructor(private userSvc: UserService, private auth: AuthService) { }
+  constructor(private userSvc: UserService, private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.auth.user$.subscribe(u => {
@@ -43,5 +44,6 @@ export class ProfileEditorComponent implements OnInit {
     user.name = this.name;
     user.email = this.email;
     this.userSvc.saveUser(user);
+    this.router.navigate(["/profile"]);
   }
 }
