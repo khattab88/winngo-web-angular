@@ -3,16 +3,13 @@
     <header>
       <div class="left">
         <div class="button">
-          <a href="#">
+          <a (click)="toggleMenu()">
             <i class="fa fa-align-justify"></i>
           </a>
         </div>
       </div>
 
       <div class="right">
-        <!-- <div class="button left">
-          <button (click)="logout()">Logout</button>
-        </div> -->
         <div class="button left">
           <div id="badge">
             <span class="badge badge-pill badge-danger">
@@ -30,3 +27,7 @@
 
   </div>
 </div>
+
+
+
+<app-menu [visible]="menuOpened"></app-menu>

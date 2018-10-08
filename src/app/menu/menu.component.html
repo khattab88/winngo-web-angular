@@ -1,0 +1,17 @@
+<aside *ngIf="visible">
+  <div id="head">
+      <div>
+          <img src="/assets/user.png" alt="User">
+          <p>{{ userName }}</p>
+      </div>
+  </div>
+  <div id="links">
+      <div><a [routerLink]="['/']">Home</a></div>
+      <div [routerLink]="['/profile']"><a>User Profile</a></div>
+      <div><a href="#">Wallet</a></div>
+      <div><a href="#">Favorites</a></div>
+      <div><a href="#">Interests</a></div>
+      <div><a href="#">Settings</a></div>
+      <div><a (click)="logout()">Logout</a></div>
+  </div>
+</aside>

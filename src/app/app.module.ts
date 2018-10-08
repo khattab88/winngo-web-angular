@@ -25,6 +25,7 @@ import { UserService } from './data/user.service';
 import { BrandService } from './data/brand.service';
 import { BranchService } from './data/branch.service';
 import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FooterComponent } from './footer/footer.component';
     BranchComponent,
     ProfileComponent,
     ProfileEditorComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

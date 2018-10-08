@@ -1,4 +1,3 @@
-import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  menuOpened: boolean;
+
+  constructor() { }
 
   ngOnInit() {
+    this.menuOpened = false;
   }
 
-  logout(){
-    console.log("logout");
-    this.auth.logout();
+  toggleMenu(){
+    this.menuOpened = !this.menuOpened;
   }
 
 }
