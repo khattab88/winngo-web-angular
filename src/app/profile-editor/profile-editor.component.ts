@@ -1,3 +1,4 @@
+import { AppUser } from './../models/app-user';
 import { Component, OnInit } from '@angular/core';
 import { Gender } from '../enums/gender';
 import { AuthService } from '../auth.service';
@@ -9,9 +10,10 @@ import { UserService } from '../data/user.service';
   styleUrls: ['./profile-editor.component.css']
 })
 export class ProfileEditorComponent implements OnInit {
+  id: string;
   name: string;
-  mobile: string;
   email: string;
+  mobile: string;
   birthDate: Date;
   gender: Gender;
   homeArea: string;
@@ -24,6 +26,7 @@ export class ProfileEditorComponent implements OnInit {
   ngOnInit() {
     this.auth.user$.subscribe(u => {
       this.userSvc.get(u.uid).subscribe(user => {
+        this.id = user.id;
         this.name = user.name;
         this.mobile = user.mobile;
         this.email = user.email;
@@ -35,4 +38,10 @@ export class ProfileEditorComponent implements OnInit {
     });
   }
 
+  save(user: AppUser){
+    user.id = this.id;
+    user.name = this.name;
+    user.email = this.email;
+    this.userSvc.saveUser(user);
+  }
 }

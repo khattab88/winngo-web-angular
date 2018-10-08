@@ -19,45 +19,45 @@
             <input type="email" placeholder="Email" value="{{ email }}" disabled>
         </div>
 
-        <form>
+        <form #f="ngForm" (ngSubmit)="save(f.value)">
             <div class="field">
                 <label for="mobile">Mobile</label>
-                <input id="mobile" type="tel" placeholder="Mobile number" value="{{ mobile }}">
+                <input [(ngModel)]="mobile" name="mobile" id="mobile" type="tel" placeholder="Mobile number">
             </div>
             <div class="field">
-                <label for="birthdate">Birth Date</label>
-                <input id="birthdate" type="date" [value]="birthDate | date:'yyyy-MM-dd'" placeholder="Birth date">
+                <label for="birthDate">Birth Date</label>
+                <input type="date" [ngModel] ="birthDate | date:'yyyy-MM-dd'" name="birthDate" (ngModelChange)="birthDate = $event" placeholder="Birth date" />
             </div>
             <div class="field gender">
                 <label for="gender">Male</label>
-                <input type="radio" name="gender" value="male" [checked]="gender == 'Male'">
+                <input [(ngModel)]="gender" name="gender" value="Male" type="radio" [checked]="gender == 'Male'">
                 <label for="gender">Female</label>
-                <input type="radio" name="gender" value="female" [checked]="gender == 'Female'">
+                <input [(ngModel)]="gender" name="gender" value="Female" type="radio" [checked]="gender == 'Female'">
             </div>
             <div class="field">
-                <label for="homearea">Home</label>
-                <select id="homearea">
+                <label for="homeArea">Home</label>
+                <select [(ngModel)]="homeArea" name="homeArea" id="homeArea">
                     <option value="">Select</option>
                     <option *ngFor="let area of areas" [value]="area" [selected]="area == homeArea">{{ area }}</option>
                 </select>
             </div>
             <div class="field">
-                <label for="workarea">Work</label>
-                <select id="workarea">
+                <label for="workArea">Work</label>
+                <select [(ngModel)]="workArea" name="workArea" id="workArea">
                     <option value="">Select</option>
                     <option *ngFor="let area of areas" [value]="area" [selected]="area == workArea">{{ area }}</option>
                 </select>
             </div>
-        </form>
 
-        <div class="buttons">
-            <div class="field">
-                <button id="save" routerLink="/profile">Save</button>
+            <div class="buttons">
+                <div class="field">
+                    <button type="submit" id="save">Save</button>
+                </div>
+                <div class="field">
+                    <button id="cancel" routerLink="/profile">Cancel</button>
+                </div>
             </div>
-            <div class="field">
-                <button id="cancel" routerLink="/profile">Cancel</button>
-            </div>
-        </div>
+        </form>
 
     </div>
 </div>

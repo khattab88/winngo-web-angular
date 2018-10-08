@@ -14,8 +14,12 @@ export class UserService {
   save(user: firebase.User){
     this.db.object("/users/" + user.uid).update({
       name: user.displayName,
-      email: user.email
+      email: user.email,
     });
+  }
+
+  saveUser(user: AppUser){
+    this.db.object("/users/" + user.id).update(user);
   }
 
   get(uid: string): FirebaseObjectObservable<AppUser>{

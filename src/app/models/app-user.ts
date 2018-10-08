@@ -1,5 +1,6 @@
 import { Gender } from './../enums/gender';
 export interface AppUser {
+    id: string;
     name: string;
     email: string;
     mobile: string;
