@@ -30,9 +30,9 @@
             </div>
             <div class="field gender">
                 <label for="gender">Male</label>
-                <input [(ngModel)]="gender" name="gender" value="Male" type="radio" [checked]="gender == 'Male'">
+                <input [(ngModel)]="gender" name="gender" value="Male" type="radio" [checked]="gender[0] == 'Male'">
                 <label for="gender">Female</label>
-                <input [(ngModel)]="gender" name="gender" value="Female" type="radio" [checked]="gender == 'Female'">
+                <input [(ngModel)]="gender" name="gender" value="Female" type="radio" [checked]="gender[1] == 'Female'">
             </div>
             <div class="field">
                 <label for="homeArea">Home</label>
